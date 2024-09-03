@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Castoro:ital@0;1&display=swap');
+
+/***base***/
+
+body {
+    font-family: "Bruno Ace SC", sans-serif;
+    line-height: 1.5;
+}
+
+*,
+**::before,
+**::after {
+    box-sizing: border-box;
+
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/***layout***/
+
+.header {
+    background-color: #000000;
+    color: #D1D1D1
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* outline: 1px solid white; */ 
+}
+
+.nav li a{
+    display: block;
+    color: #D1D1D1;
+}
+
+.nav li a:hover{
+    color: #00FFA3;
+}
+
+
+/***component***/
+
+/* 設計btn時引入功能與樣式分離之概念 */
+.btn {
+    padding: 12px 24px;
+    border-radius: 32px;
+}
+
+.btn-light {
+    background-color: #ffffff;
+    color: #000000;
+}
+.btn-light:hover {
+    background-color: #00FFA3;
+    color: #000000;
+}
+
+.btn-dark {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.btn-dark:hover {
+    background-color: #00FFA3;
+    color: #000000;
+}
+
+
+/***pages*** (放置只有在特定頁別才會出現的元素) */
+.banner {
+    background: #000000;
+    color: #ffffff;
+    padding-top: 72px;
+    padding-bottom: 32px;
+}
+
+.intro {
+    background-image: url("image/background-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    padding: 16px 0;
+
+}
+
+.intro-left {
+    width: 526px;
+}
+
+.about {
+    padding: 160px 0;
+}
+
+.about-left {
+    width: 636px;
+    flex-wrap: wrap;
+    /* (讓元素變成會換行) */
+    justify-content: space-between;    
+    
+}
+
+.about-left-card {
+    width: calc(50% - 12px);
+    /* (注意運算符號左右二側需留空白字符)*/   
+    border: 1px solid #E3E3E3;
+    box-shadow: 4px 4px 4px 0px #00000014;
+    /* (設定數值可以從設計稿copy,但須知道是怎麼來的 ) */
+    
+    /* padding: 16px; */
+}
+
+.about-right {
+    width: 526px;
+}
+
+.contact{
+    background: linear-gradient(180deg, #050014 0%, rgba(1, 2, 30, 0.89) 100%);
+    /* (設定數值可以從設計稿copy,但須知道是怎麼來的 ) */ 
+    color: #ffffff;
+    padding: 96px 0;
+}
+
+.contact-left{
+    width: 657px;
+}
+
+.contact-right{
+    width: 526px;
+}
+
+.social-link{
+    border-radius: 40px;
+
+    box-shadow: 4px 4px 8px 0px #00000014;
+    /* (設定數值可以從設計稿copy,但須知道是怎麼來的 ) */ 
+}
+
+.social-link:hover{
+    box-shadow: 0px 0px 16px 3px #9094FFE5;
+    /* (設定數值可以從設計稿copy,但須知道是怎麼來的 ) */ 
+    /* (鼠標滑過去才會發光) */
+    transition: 0.5s;
+}
+
+.project{
+    padding: 160px 0px;
+}
+.project-up{
+    width: 746px;
+    margin-left: auto;
+    /* () */
+}
+
+.project-down{
+    padding-top: 28px;
+}
+
+.footer{
+    background: #000000;
+    color: #ffffff;
+    padding: 40px 0px;
+}
+
+
+/***utils***/
+
+.container {
+    width: 1296px;
+    margin: 0 auto;
+
+}
+
+.h1 {
+    font-size: 128px;
+}
+
+.h2 {
+    font-size: 64px;
+}
+
+.fs-1 {
+    font-size: 32px;
+
+}
+
+.fs-2 {
+    font-size: 24px;
+}
+
+.fs-3 {
+    font-size: 20px;
+}
+
+.fs-4 {
+    font-size: 16px;
+}
+
+.text-primary {
+    color: #00FFA3;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-block {
+    display: block;
+}
+
+.flex-column {
+    flex-direction: column;
+    
+}
+
+.justify-content-end {
+    justify-content: end;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.align-item-start {
+    align-items: start;
+}
+
+.align-item-center {
+    align-items: center;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.mr-6 {
+    margin-right: 24px;
+}
+
+.mb-4{ 
+    margin-bottom: 16px;
+}
+
+.mb-6{ 
+    margin-bottom: 24px;
+}
+
+.gap-4{
+    gap: 24px;
+}
